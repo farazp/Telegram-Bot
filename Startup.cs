@@ -50,9 +50,6 @@ namespace WhoisMasterBot
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-            services.AddTransient<IWhoIs, Whois>();
-            services.AddTransient<IAddressHelper, AddressHelper>();
             services.Configure<BotConfiguration>(options => Configuration.GetSection("BotConfiguration").Bind(options));
         }
 
