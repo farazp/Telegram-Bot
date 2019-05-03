@@ -12,8 +12,7 @@ namespace WhoisMasterBot.Models
     {
         public Bot(IOptions<BotConfiguration> _config)
         {
-            //_config = config.Value;
-            //_configuration.GetSection("BotConfiguration");
+
             config = _config;
             botConfiguration = _config.Value;
         }
@@ -31,8 +30,7 @@ namespace WhoisMasterBot.Models
                 return botClient;
             }
 
-            //var botConfiguration = new BotConfiguration();
-            //_Configuration.GetSection("BotConfiguration").Bind(botConfiguration);
+
             commandsList = new List<Command>();
             commandsList.Add(new StartCommand());
             //TODO: Add more commands
